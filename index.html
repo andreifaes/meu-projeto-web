@@ -328,7 +328,6 @@
     <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 glass-effect">
         <div class="max-w-7xl mx-auto flex justify-center gap-8 py-4 px-6 overflow-x-auto no-scrollbar">
             <button onclick="showTab('estrutura')" id="btn-estrutura" class="nav-link active font-bold text-[11px] md:text-xs uppercase tracking-widest whitespace-nowrap">Estrutura</button>
-            <button onclick="showTab('databases-tab')" id="btn-databases-tab" class="nav-link font-bold text-[11px] md:text-xs uppercase tracking-widest whitespace-nowrap text-blue-600">Databases</button>
             <button onclick="showTab('atividades-tab')" id="btn-atividades-tab" class="nav-link font-bold text-[11px] md:text-xs uppercase tracking-widest whitespace-nowrap text-purple-600">Atividades</button>
             <button onclick="showTab('projetos-tab')" id="btn-projetos-tab" class="nav-link font-bold text-[11px] md:text-xs uppercase tracking-widest whitespace-nowrap text-amber-600">Projetos</button>
         </div>
@@ -397,71 +396,15 @@
             </div>
         </section>
 
-        <!-- Aba: Databases -->
-        <section id="databases-tab" class="tab-content">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-2">Bases de Dados e Registros</h2>
-                <p class="text-slate-500 text-sm">Acesso rápido aos repositórios oficiais e dashboards.</p>
-                <div class="h-1 w-20 bg-blue-500 mx-auto rounded-full mt-4"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⭐</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Reclame Aqui</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Monitoramento de reputação pública e tratativas externas.</p>
-                    <div class="mt-8 flex flex-col gap-3 items-center">
-                        <a href="https://www.notion.so/blingerp/1762e39900a081d480e5ec8c49a89250?v=1762e39900a0810db984000ce515dcfe&source=copy_link" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Acessar Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
-                        <a href="https://lookerstudio.google.com/reporting/a2d3927b-0eaf-4b7f-bd84-d3d93c3f9b61" target="_blank" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Acessar Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⚖️</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Ouvidorias</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Chamados em segunda instância e mediação de conflitos.</p>
-                    <div class="mt-8 flex flex-col gap-3 items-center">
-                        <a href="https://www.notion.so/blingerp/Database-ouvidorias-1762e39900a0811aa166c3912c8eb076?source=copy_link" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Acessar Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
-                        <a href="https://lookerstudio.google.com/reporting/c7e91853-3f67-4a02-abd5-ba16f91d59f5" target="_blank" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Acessar Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-3xl mb-6">📈</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">NPS</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Medição de lealdade e satisfação contínua dos clientes.</p>
-                    <div class="mt-8 flex flex-col gap-3 items-center">
-                        <a href="https://lookerstudio.google.com/reporting/8e964e55-dc31-4d0a-919e-c1e165512af1" target="_blank" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Acessar Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-4xl mx-auto p-6 bg-slate-900/5 rounded-3xl border border-slate-200 text-center">
-                <p class="text-sm text-slate-600 font-medium">
-                    <span class="text-amber-600 mr-2">⚠️</span> Se algum link acima não abrir ou apresentar erro, favor entrar em contato diretamente com <span class="text-slate-900 font-bold">Andrei Faés</span>.
-                </p>
-            </div>
-        </section>
-
-        <!-- Aba: Atividades -->
+        <!-- Aba: Atividades (Unificada com Databases) -->
         <section id="atividades-tab" class="tab-content">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-2">Dimensionamento de Atividades</h2>
-                <p class="text-slate-500 text-sm">Distribuição de recursos humanos por frente de trabalho.</p>
+                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-2">Dimensionamento e Bases de Dados</h2>
+                <p class="text-slate-500 text-sm">Acesso a indicadores de equipe, repositórios e dashboards.</p>
                 <div class="h-1 w-20 bg-purple-500 mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
                 <!-- Reclame Aqui -->
                 <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⭐</div>
@@ -473,13 +416,24 @@
                             <span class="text-[9px] font-black text-amber-600 uppercase mt-1 px-2 py-0.5 bg-amber-50 rounded-md">1 pessoa exclusiva</span>
                         </div>
                     </div>
-                    <div class="mt-8 flex flex-col gap-3 items-center">
-                        <button onclick="openMetricsModal()" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Ver Benchmarks <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
-                        <button onclick="openTeamModal('Reclame Aqui', 'Aline Santos', 'AS', ['Aline Santos', 'Daniela Batista', 'Graziela Soliman', 'Fabiana Becaro'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
+                    <!-- Botões de Ação -->
+                    <div class="mt-8 flex flex-col gap-3 items-center w-full border-t border-slate-50 pt-6">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button onclick="openTeamModal('Reclame Aqui', 'Aline Santos', 'AS', ['Aline Santos', 'Daniela Batista', 'Graziela Soliman', 'Fabiana Becaro'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                                Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                            <button onclick="openMetricsModal()" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                                Ver Benchmarks <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4 mt-1">
+                            <a href="https://www.notion.so/blingerp/1762e39900a081d480e5ec8c49a89250?v=1762e39900a0810db984000ce515dcfe&source=copy_link" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-blue-600">
+                                Notion Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <a href="https://lookerstudio.google.com/reporting/a2d3927b-0eaf-4b7f-bd84-d3d93c3f9b61" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-emerald-600">
+                                Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -494,10 +448,21 @@
                             <span class="text-[9px] font-black text-blue-600 uppercase mt-1 px-2 py-0.5 bg-blue-50 rounded-md">1 pessoa exclusiva</span>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <button onclick="openTeamModal('Ouvidoria', 'Thaíse Sganzerla', 'TS', ['Thaíse Sganzerla'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
+                    <!-- Botões de Ação -->
+                    <div class="mt-8 flex flex-col gap-3 items-center w-full border-t border-slate-50 pt-6">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button onclick="openTeamModal('Ouvidoria', 'Thaíse Sganzerla', 'TS', ['Thaíse Sganzerla'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                                Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4 mt-1">
+                            <a href="https://www.notion.so/blingerp/Database-ouvidorias-1762e39900a0811aa166c3912c8eb076?source=copy_link" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-blue-600">
+                                Notion Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <a href="https://lookerstudio.google.com/reporting/c7e91853-3f67-4a02-abd5-ba16f91d59f5" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-emerald-600">
+                                Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -509,10 +474,21 @@
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Equipe Alocada</span>
                         <span class="text-2xl font-black text-slate-900">1 pessoa</span>
                     </div>
-                    <div class="mt-8">
-                        <button onclick="openTeamModal('NPS', 'Daniela Batista', 'DB', ['Daniela Batista'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
+                    <!-- Botões de Ação -->
+                    <div class="mt-8 flex flex-col gap-3 items-center w-full border-t border-slate-50 pt-6">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button onclick="openTeamModal('NPS', 'Daniela Batista', 'DB', ['Daniela Batista'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                                Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4 mt-1">
+                            <a href="https://lookerstudio.google.com/reporting/8e964e55-dc31-4d0a-919e-c1e165512af1" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-emerald-600">
+                                Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/0AEaDh_l_xbCPUk9PVA" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-blue-600">
+                                Acessar Drive <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -524,18 +500,58 @@
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Equipe Alocada</span>
                         <span class="text-2xl font-black text-slate-900">1 pessoa</span>
                     </div>
-                    <div class="mt-8">
-                        <button onclick="openTeamModal('Clientes Complicados', 'Graziela Soliman', 'GS', ['Graziela Soliman'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
+                    <!-- Botões de Ação -->
+                    <div class="mt-8 flex flex-col gap-3 items-center w-full border-t border-slate-50 pt-6">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button onclick="openTeamModal('Clientes Complicados', 'Graziela Soliman', 'GS', ['Graziela Soliman'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                                Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                        <div class="flex justify-center mt-1">
+                            <a href="https://www.notion.so/blingerp/Database-clientes-complicados-1762e39900a08142b5cbd8f9644f902c?source=copy_link" target="_blank" class="flex items-center gap-2 text-slate-500 font-bold text-[10px] uppercase tracking-widest hover:text-blue-600">
+                                Notion Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procon (Novidade em Atividades) -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🏛️</div>
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Procon</h4>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Gestão de notificações e processos administrativos de órgãos de defesa.</p>
+                    <div class="mt-8 border-t border-slate-50 pt-6 w-full flex justify-center">
+                        <a href="https://www.notion.so/blingerp/Database-Procon-1762e39900a081848adfea7af126a048?source=copy_link" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            Acessar Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Processos (Novidade em Atividades) -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6">📂</div>
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Processos</h4>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Documentação técnica e fluxos operacionais da frente de Qualidade.</p>
+                    <div class="mt-8 border-t border-slate-50 pt-6 w-full flex justify-center">
+                        <a href="https://techdocs.bling.com.br/collection/qualidade-PGfs2oT154/recent" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            Documentação <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="max-w-4xl mx-auto p-6 bg-slate-900/5 rounded-3xl border border-slate-200 text-center">
-                <p class="text-sm text-slate-600 font-medium">
-                    <span class="text-purple-600 mr-2">ℹ️</span> Esses números foram atualizados em <span class="text-slate-800 font-bold">abril de 2026</span>.
-                </p>
+            <!-- Avisos e Notas -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="p-6 bg-slate-900/5 rounded-3xl border border-slate-200 text-center">
+                    <p class="text-sm text-slate-600 font-medium">
+                        <span class="text-amber-600 mr-2">⚠️</span> Se algum link de base ou dashboard não abrir ou apresentar erro, favor entrar em contato diretamente com <span class="text-slate-900 font-bold">Andrei Faés</span>.
+                    </p>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">
+                        <span class="text-purple-500 mr-2">ℹ️</span> Dimensionamento atualizado em <span class="text-slate-600">abril de 2026</span>
+                    </p>
+                </div>
             </div>
         </section>
 
