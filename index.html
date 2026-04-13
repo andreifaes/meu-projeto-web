@@ -191,7 +191,7 @@
         </div>
     </div>
 
-    <!-- Modal Métricas Reclame Aqui (Ajustado para Altura Compacta) -->
+    <!-- Modal Métricas Reclame Aqui -->
     <div id="modal-metrics-overlay" class="fixed inset-0 bg-slate-900/60 z-[100] hidden flex items-center justify-center p-4 overflow-y-auto" onclick="closeMetricsModal()">
         <div id="modal-metrics-content" class="bg-white w-full max-w-5xl rounded-[2rem] shadow-2xl overflow-hidden scale-95 opacity-0 my-4" onclick="event.stopPropagation()">
             <div class="gradient-header p-6 text-white relative">
@@ -205,7 +205,6 @@
             </div>
             
             <div class="p-6 space-y-4">
-                <!-- Seção 1: Benchmark e Tabela -->
                 <div class="flex flex-col lg:flex-row gap-6">
                     <div class="lg:w-1/3">
                         <div class="bg-green-50 p-6 rounded-2xl border border-green-100 h-full flex flex-col justify-center">
@@ -249,14 +248,12 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="mt-2 flex justify-between items-center text-[9px] font-bold text-slate-400 uppercase tracking-widest italic">
-                            <span>* Dados de abril/2026</span>
+                        <div class="mt-2 flex justify-end items-center text-[9px] font-bold text-slate-400 uppercase tracking-widest italic">
                             <span>* Meta: 22 atendimentos/agente</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Seção 2: Análise e Botão Lado a Lado -->
                 <div class="flex flex-col sm:flex-row gap-4 items-stretch">
                     <div class="flex-1 bg-slate-900 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
                         <div class="relative z-10 flex items-start gap-3">
@@ -276,7 +273,7 @@
         </div>
     </div>
 
-    <!-- Modal Equipe Reclame Aqui -->
+    <!-- Modal Equipe (Dinâmico) -->
     <div id="modal-team-overlay" class="fixed inset-0 bg-slate-900/60 z-[100] hidden flex items-center justify-center p-4" onclick="closeTeamModal()">
         <div id="modal-team-content" class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden scale-90 opacity-0" onclick="event.stopPropagation()">
             <div class="gradient-header p-8 text-white relative">
@@ -286,32 +283,21 @@
                     </svg>
                 </button>
                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-4">👥</div>
-                <h3 class="text-2xl font-black tracking-tight">Equipe Reclame Aqui</h3>
-                <p class="text-green-50 text-sm font-medium opacity-90">Gestão de Reputação Bling</p>
+                <h3 id="team-modal-title" class="text-2xl font-black tracking-tight">Equipe</h3>
+                <p class="text-green-50 text-sm font-medium opacity-90">Gestão de Frente Bling</p>
             </div>
             <div class="p-8 space-y-8">
                 <div>
                     <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Responsável</p>
                     <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div class="w-10 h-10 bg-green-500 text-white rounded-xl flex items-center justify-center font-bold">AS</div>
-                        <p class="text-slate-800 font-black">Aline Santos</p>
+                        <div id="team-modal-leader-initials" class="w-10 h-10 bg-green-500 text-white rounded-xl flex items-center justify-center font-bold">--</div>
+                        <p id="team-modal-leader-name" class="text-slate-800 font-black">--</p>
                     </div>
                 </div>
                 <div>
                     <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Integrantes do Time</p>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3 text-slate-700 font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Aline Santos
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Daniela Batista
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Graziela Soliman
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-medium">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Fabiana Becaro
-                        </div>
+                    <div id="team-modal-members-list" class="space-y-3">
+                        <!-- Gerado via JS -->
                     </div>
                 </div>
                 <button onclick="closeTeamModal()" class="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-colors uppercase text-xs tracking-widest mt-4">Voltar</button>
@@ -361,12 +347,7 @@
                 <div class="hidden lg:block main-spine"></div>
                 
                 <div class="relative z-10 mb-12">
-                    <div onclick="openModal(this)" 
-                         data-name="Andrei Faés" 
-                         data-role="Supervisor de Qualidade e Reputação" 
-                         data-aniversario="15 de Março" 
-                         data-entrada="10/02/2018"
-                         class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl border-b-4 bling-border w-72 md:w-96 text-center card-hover-interactive">
+                    <div onclick="openModal(this)" data-name="Andrei Faés" data-role="Supervisor de Qualidade e Reputação" data-aniversario="15 de Março" data-entrada="10/02/2018" class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl border-b-4 bling-border w-72 md:w-96 text-center card-hover-interactive">
                         <div class="text-[10px] font-bold text-green-400 mb-2 uppercase tracking-[0.3em]">Supervisor</div>
                         <h3 class="text-2xl font-black">Andrei Faés</h3>
                         <p class="text-slate-400 text-xs mt-2 font-medium">Liderança de Qualidade</p>
@@ -463,33 +444,6 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⚠️</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Clientes Complicados</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Registro de perfis críticos e histórico de atritos operacionais.</p>
-                    <a href="https://www.notion.so/blingerp/Database-clientes-complicados-1762e39900a08142b5cbd8f9644f902c?source=copy_link" target="_blank" class="mt-8 flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                        Acessar Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                </div>
-
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🏛️</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Procon</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Gestão de notificações e processos administrativos de órgãos de defesa.</p>
-                    <a href="https://www.notion.so/blingerp/Database-Procon-1762e39900a081848adfea7af126a048?source=copy_link" target="_blank" class="mt-8 flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                        Acessar Base <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                </div>
-
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6">📂</div>
-                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Processos</h4>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed flex-grow">Documentação técnica e fluxos operacionais da frente de Qualidade.</p>
-                    <a href="https://techdocs.bling.com.br/collection/qualidade-PGfs2oT154/recent" target="_blank" class="mt-8 flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
-                        Acessar Documentação <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                </div>
             </div>
 
             <div class="max-w-4xl mx-auto p-6 bg-slate-900/5 rounded-3xl border border-slate-200 text-center">
@@ -508,7 +462,7 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-                <!-- Reclame Aqui (Clicável nos botões) -->
+                <!-- Reclame Aqui -->
                 <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⭐</div>
                     <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Reclame Aqui</h4>
@@ -519,17 +473,17 @@
                             <span class="text-[9px] font-black text-amber-600 uppercase mt-1 px-2 py-0.5 bg-amber-50 rounded-md">1 pessoa exclusiva</span>
                         </div>
                     </div>
-                    <!-- Botões de Ação do Card -->
                     <div class="mt-8 flex flex-col gap-3 items-center">
                         <button onclick="openMetricsModal()" class="flex items-center gap-2 text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
                             Ver Benchmarks <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </button>
-                        <button onclick="openTeamModal()" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                        <button onclick="openTeamModal('Reclame Aqui', 'Aline Santos', 'AS', ['Aline Santos', 'Daniela Batista', 'Graziela Soliman', 'Fabiana Becaro'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
                             Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </button>
                     </div>
                 </div>
 
+                <!-- Ouvidoria -->
                 <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⚖️</div>
                     <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Ouvidoria</h4>
@@ -540,8 +494,14 @@
                             <span class="text-[9px] font-black text-blue-600 uppercase mt-1 px-2 py-0.5 bg-blue-50 rounded-md">1 pessoa exclusiva</span>
                         </div>
                     </div>
+                    <div class="mt-8">
+                        <button onclick="openTeamModal('Ouvidoria', 'Thaíse Sganzerla', 'TS', ['Thaíse Sganzerla'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </div>
                 </div>
 
+                <!-- NPS -->
                 <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-3xl mb-6">📈</div>
                     <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">NPS</h4>
@@ -549,14 +509,25 @@
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Equipe Alocada</span>
                         <span class="text-2xl font-black text-slate-900">1 pessoa</span>
                     </div>
+                    <div class="mt-8">
+                        <button onclick="openTeamModal('NPS', 'Daniela Batista', 'DB', ['Daniela Batista'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </div>
                 </div>
 
+                <!-- Clientes complicados -->
                 <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">⚠️</div>
                     <h4 class="font-black text-slate-900 text-lg uppercase tracking-tight">Clientes Complicados</h4>
                     <div class="mt-6 flex flex-col items-center gap-1">
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Equipe Alocada</span>
                         <span class="text-2xl font-black text-slate-900">1 pessoa</span>
+                    </div>
+                    <div class="mt-8">
+                        <button onclick="openTeamModal('Clientes Complicados', 'Graziela Soliman', 'GS', ['Graziela Soliman'])" class="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            Ver Equipe <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -682,8 +653,21 @@
             setTimeout(() => { overlay.classList.add('hidden'); }, 300);
         }
 
-        // Modal Equipe RA
-        function openTeamModal() {
+        // Modal Equipe (Dinâmico)
+        function openTeamModal(teamName, leaderName, leaderInitials, members) {
+            document.getElementById('team-modal-title').innerText = "Equipe " + teamName;
+            document.getElementById('team-modal-leader-name').innerText = leaderName;
+            document.getElementById('team-modal-leader-initials').innerText = leaderInitials;
+            
+            const list = document.getElementById('team-modal-members-list');
+            list.innerHTML = '';
+            members.forEach(member => {
+                const item = document.createElement('div');
+                item.className = 'flex items-center gap-3 text-slate-700 font-medium';
+                item.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> ${member}`;
+                list.appendChild(item);
+            });
+
             const overlay = document.getElementById('modal-team-overlay');
             const content = document.getElementById('modal-team-content');
             overlay.classList.remove('hidden');
